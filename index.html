@@ -1,0 +1,314 @@
+<title>クワイエットベル</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Old+Mincho:wght@600;900&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: 一枚の台帳。左に見出しの罫、右に本文。記事は同じページ内で開く（#a01〜#a07） */
+:root {
+  --paper: #f6f7f8;
+  --sheet: #ffffff;
+  --ink: #1d2733;
+  --muted: #5b6878;
+  --rule: #d5dbe2;
+  --indigo: #27466e;
+  --indigo-soft: #e6edf6;
+  --due: #a35a00;
+  --due-soft: #fbf1e3;
+  --f-display: "Zen Old Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --f-body: "BIZ UDPGothic", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #12171d; --sheet: #182029; --ink: #e3e8ee; --muted: #9aa7b6; --rule: #2c3743;
+    --indigo: #9dbbe3; --indigo-soft: #1f2d3e; --due: #f0b35c; --due-soft: #2e2416; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #12171d; --sheet: #182029; --ink: #e3e8ee; --muted: #9aa7b6; --rule: #2c3743;
+  --indigo: #9dbbe3; --indigo-soft: #1f2d3e; --due: #f0b35c; --due-soft: #2e2416; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--paper); color: var(--ink);
+  font-family: var(--f-body); font-size: 16px; line-height: 1.85;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 48px;
+}
+a { color: var(--indigo); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--indigo); outline-offset: 2px; }
+.wrap { max-width: 1040px; margin: 0 auto; }
+
+.notice {
+  margin: 16px auto 0; max-width: 1040px;
+  background: var(--due-soft); color: var(--ink);
+  border: 1px solid var(--due); border-radius: 4px;
+  padding: 10px 14px; font-size: 14px; line-height: 1.7;
+}
+.notice strong { color: var(--due); }
+
+header.site {
+  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px;
+  padding-block: 28px 18px; border-bottom: 2px solid var(--ink);
+}
+.brand { font-family: var(--f-display); font-weight: 900; font-size: 26px; letter-spacing: .04em; text-decoration: none; color: var(--ink); }
+.brand small { font-family: var(--f-body); font-weight: 400; font-size: 13px; color: var(--muted); margin-left: 8px; letter-spacing: 0; }
+nav.top { display: flex; flex-wrap: wrap; gap: 4px 20px; font-size: 14px; }
+nav.top a { color: var(--ink); text-decoration: none; }
+nav.top a:hover { color: var(--indigo); text-decoration: underline; }
+
+.hero { padding-block: 48px 40px; display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 40px; align-items: center; }
+.hero h1 { font-family: var(--f-display); font-weight: 900; font-size: clamp(30px, 5vw, 46px); line-height: 1.35; margin: 0 0 18px; text-wrap: balance; }
+.hero p { margin: 0; color: var(--muted); max-width: 34em; }
+
+/* 期限の暦: 満了日から逆に数えた1行の帯 */
+.ruler { background: var(--sheet); border: 1px solid var(--rule); border-radius: 4px; padding: 18px 18px 14px; }
+.ruler-cap { font-size: 12px; color: var(--muted); letter-spacing: .06em; margin-bottom: 14px; }
+.track { position: relative; height: 54px; }
+.track::before { content: ""; position: absolute; left: 0; right: 0; top: 26px; height: 2px; background: var(--rule); }
+.span { position: absolute; top: 22px; height: 10px; border-radius: 2px; }
+.span.window { background: var(--indigo); left: 0%; width: 66.7%; }
+.span.late { background: var(--due); left: 66.7%; width: 33.3%; opacity: .8; }
+.tick { position: absolute; top: 0; transform: translateX(-50%); font-family: var(--f-mono); font-size: 12px; color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.tick.b { top: 38px; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12px; color: var(--muted); margin-top: 6px; }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
+
+section.block { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 16px 40px; padding-block: 36px; border-top: 1px solid var(--rule); }
+section.block > h2 { font-family: var(--f-display); font-weight: 600; font-size: 20px; margin: 0; line-height: 1.5; }
+section.block > h2 span { display: block; font-family: var(--f-body); font-size: 12px; font-weight: 400; color: var(--muted); letter-spacing: .08em; }
+.body { min-width: 0; }
+.body p { margin: 0 0 14px; max-width: 40em; }
+
+.features { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border: 1px solid var(--rule); background: var(--sheet); border-radius: 4px; }
+.features div { padding: 16px 18px; border-right: 1px solid var(--rule); }
+.features div:last-child { border-right: 0; }
+.features h3 { margin: 0 0 6px; font-size: 15px; }
+.features p { margin: 0; font-size: 14px; color: var(--muted); line-height: 1.75; }
+.line { margin-top: 16px; font-size: 14px; color: var(--muted); border-left: 3px solid var(--rule); padding-left: 12px; max-width: 44em; }
+
+ol.articles { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
+ol.articles li { border-bottom: 1px solid var(--rule); }
+ol.articles a { display: grid; grid-template-columns: 3.2em minmax(0, 1fr) auto; gap: 12px; align-items: baseline; padding: 14px 4px; text-decoration: none; color: var(--ink); }
+ol.articles a:hover .t { color: var(--indigo); text-decoration: underline; }
+ol.articles .n { font-family: var(--f-mono); font-size: 13px; color: var(--muted); }
+ol.articles .t { font-weight: 700; line-height: 1.6; }
+ol.articles .who { font-size: 12px; color: var(--muted); white-space: nowrap; }
+.note-small { font-size: 13px; color: var(--muted); margin-top: 12px; }
+
+dl.company { display: grid; grid-template-columns: 9em minmax(0, 1fr); margin: 0; border-top: 1px solid var(--rule); }
+dl.company dt, dl.company dd { margin: 0; padding: 10px 4px; border-bottom: 1px solid var(--rule); }
+dl.company dt { color: var(--muted); font-size: 14px; }
+.tag { display: inline-block; font-size: 12px; padding: 0 8px; border-radius: 3px; background: var(--due-soft); color: var(--due); border: 1px solid var(--due); margin-left: 6px; line-height: 1.8; }
+
+/* 記事ビュー */
+#article { padding-block: 24px 0; }
+.back { display: inline-block; margin-bottom: 16px; font-size: 14px; }
+article.doc { background: var(--sheet); border: 1px solid var(--rule); border-radius: 4px; padding: 28px clamp(16px, 4vw, 48px) 36px; min-width: 0; }
+article.doc h1 { font-family: var(--f-display); font-weight: 900; font-size: clamp(24px, 3.6vw, 32px); line-height: 1.45; margin: 0 0 16px; text-wrap: balance; }
+article.doc h2 { font-family: var(--f-display); font-weight: 600; font-size: 21px; margin: 40px 0 12px; padding-top: 16px; border-top: 1px solid var(--rule); text-wrap: balance; }
+article.doc h3 { font-size: 17px; margin: 28px 0 8px; }
+article.doc p, article.doc li { max-width: 46em; }
+article.doc hr { border: 0; border-top: 1px solid var(--rule); margin: 28px 0; }
+article.doc blockquote { margin: 12px 0; padding: 4px 16px; border-left: 3px solid var(--indigo); background: var(--indigo-soft); }
+article.doc code { font-family: var(--f-mono); font-size: .88em; background: var(--indigo-soft); padding: 1px 5px; border-radius: 3px; }
+article.doc a { word-break: break-all; }
+.tbl { overflow-x: auto; margin: 14px 0 18px; border: 1px solid var(--rule); border-radius: 4px; }
+.tbl table { border-collapse: collapse; font-size: 13.5px; line-height: 1.65; min-width: 640px; width: 100%; }
+.tbl th, .tbl td { border-bottom: 1px solid var(--rule); padding: 8px 10px; vertical-align: top; text-align: left; }
+.tbl th { background: var(--indigo-soft); font-weight: 700; white-space: nowrap; }
+.tbl tr:last-child td { border-bottom: 0; }
+mark.chk { background: var(--due-soft); color: var(--due); padding: 0 3px; border-radius: 2px; font-size: .92em; }
+.status { color: var(--muted); padding: 24px 0; }
+.pager { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-top: 20px; font-size: 14px; }
+
+footer { margin-top: 40px; padding-top: 18px; border-top: 2px solid var(--ink); font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 24px; justify-content: space-between; }
+
+@media (max-width: 760px) {
+  .hero { grid-template-columns: minmax(0, 1fr); padding-block: 32px 28px; gap: 28px; }
+  section.block { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .features { grid-template-columns: minmax(0, 1fr); }
+  .features div { border-right: 0; border-bottom: 1px solid var(--rule); }
+  .features div:last-child { border-bottom: 0; }
+  ol.articles a { grid-template-columns: 2.6em minmax(0, 1fr); }
+  ol.articles .who { grid-column: 2; }
+  dl.company { grid-template-columns: 6.5em minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .span.window, .span.late { transform-origin: left; animation: grow .9s ease-out both; }
+  .span.late { animation-delay: .5s; }
+  @keyframes grow { from { transform: scaleX(.001); } to { transform: scaleX(1); } }
+}
+</style>
+
+<div class="notice" role="note">
+  <strong>設立準備中の仮公開です。</strong>「株式会社クワイエットベル」は仮称で、登記はまだしていません（2026年11月設立予定）。サービスは準備中で、お申し込み・お問い合わせはまだ受け付けていません。
+</div>
+
+<div class="wrap">
+  <header class="site">
+    <a class="brand" href="#top">クワイエットベル<small>株式会社クワイエットベル（仮称）</small></a>
+    <nav class="top" aria-label="ページ内">
+      <a href="#service">サービス</a>
+      <a href="#articles">記事</a>
+      <a href="#company">運営者</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <div class="hero" id="top">
+      <div>
+        <h1>何もなければ黙る。<br>期限が近づいたときだけ鳴らす。</h1>
+        <p>建設業・宅建業・産廃・運送などの許認可について、更新の期限と添付書類を顧問先ごとにまとめて管理する台帳を準備しています。行政書士事務所向けのサービスです。</p>
+      </div>
+      <figure class="ruler" aria-label="宅建業免許の更新期限の例">
+        <div class="ruler-cap">例: 宅建業免許の更新（宅建業法施行規則3条）</div>
+        <div class="track">
+          <span class="span window"></span>
+          <span class="span late"></span>
+          <span class="tick" style="left:0%">90日前</span>
+          <span class="tick" style="left:66.7%">30日前</span>
+          <span class="tick" style="left:100%;transform:translateX(-100%)">満了日</span>
+          <span class="tick b" style="left:0%;transform:none">受付開始</span>
+          <span class="tick b" style="left:66.7%">申請期限</span>
+        </div>
+        <div class="legend">
+          <span><i style="background:var(--indigo)"></i>申請できる期間</span>
+          <span><i style="background:var(--due)"></i>扱いが許可行政庁ごとに違う期間</span>
+        </div>
+      </figure>
+    </div>
+
+    <section class="block" id="service">
+      <h2><span>SERVICE</span>許認可台帳（準備中）</h2>
+      <div class="body">
+        <p>同じ「5年更新」でも、受付が始まる日と最終の期限は許可行政庁の手引ごとに違います。産廃では、同じ会社の許可でも許可権者が県と市に分かれることがあります。満了日の1列だけでは、期限を取りこぼします。</p>
+        <div class="features">
+          <div><h3>1許可1行で持つ</h3><p>許可番号・許可権者・満了日を許可ごとに分け、顧問先をまたいで一覧にします。</p></div>
+          <div><h3>期限を3層で持つ</h3><p>法令の期限、手引の期限、実際に受け付ける最終日を別の列に分けます。</p></div>
+          <div><h3>出典と確認日を残す</h3><p>手引は改訂されます。値ごとに出典の URL と確認した日を記録します。</p></div>
+        </div>
+        <p class="line">期限と書類の確認までが当社の範囲です。申請書類は作成しません（行政書士の業務です）。個別の判断は、許可行政庁または専門家にご確認ください。</p>
+      </div>
+    </section>
+
+    <section class="block" id="articles">
+      <h2><span>ARTICLES</span>記事</h2>
+      <div class="body">
+        <ol class="articles" id="list"></ol>
+        <p class="note-small">条文は e-Gov 法令検索、受付の扱いは各許可行政庁の手引から取り、出典と取得日を記事ごとに付けています。【要確認】の箇所は、まだ原文で確かめきれていない記述です。</p>
+      </div>
+    </section>
+
+    <section class="block" id="company">
+      <h2><span>COMPANY</span>運営者</h2>
+      <div class="body">
+        <dl class="company">
+          <dt>商号</dt><dd>株式会社クワイエットベル<span class="tag">仮称</span><br><span style="font-size:13px;color:var(--muted)">英文表記 Quietbell Inc.</span></dd>
+          <dt>設立</dt><dd>2026年11月予定<span class="tag">未登記</span></dd>
+          <dt>所在地</dt><dd>設立後に掲載します</dd>
+          <dt>事業</dt><dd>許認可の期限・証憑を管理するソフトウェアの開発と提供（準備中）</dd>
+          <dt>お問い合わせ</dt><dd>設立後に窓口を掲載します</dd>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <div id="article" hidden>
+    <a class="back" href="#articles">← 記事一覧へ</a>
+    <article class="doc" id="doc"><p class="status">読み込み中…</p></article>
+    <div class="pager" id="pager"></div>
+  </div>
+
+  <footer>
+    <span>© 2026 クワイエットベル（仮称・設立準備中）</span>
+    <span>記事の内容は最終確認日時点のものです。</span>
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script>
+const ARTICLES = [
+  { id: "a01", file: "articles/01.md", t: "建設業許可の更新は何か月前から出せる？ 地方整備局等10局と主な5都府県の受付開始と期限", who: "事業者・行政書士" },
+  { id: "a02", file: "articles/02.md", t: "更新の「30日前」を過ぎたらどうなる？ 法令の期限・手引の期限・実際の受付の3層", who: "事業者・行政書士" },
+  { id: "a03", file: "articles/03.md", t: "許認可の有効期間と更新期限 早見表（20種・根拠条文つき）", who: "行政書士" },
+  { id: "a04", file: "articles/04.md", t: "産廃許可の更新先はどこ？ 政令市・中核市と積替保管で分かれる許可権者", who: "事業者・行政書士" },
+  { id: "a05", file: "articles/05.md", t: "更新だけではない：許可を持つ会社の定期届出一覧（決算変更届ほか）", who: "事業者" },
+  { id: "a06", file: "articles/06.md", t: "顧問先の許認可台帳に持たせる項目（許可権者・満了日・受付開始・手引期限・届出）", who: "行政書士" },
+  { id: "a07", file: "articles/07.md", t: "一般貨物自動車運送事業に許可の更新制が入る（2025年改正・施行待ち）", who: "事業者・行政書士" }
+];
+const list = document.getElementById("list");
+ARTICLES.forEach((a, i) => {
+  const li = document.createElement("li");
+  li.innerHTML = `<a href="#${a.id}"><span class="n">${String(i + 1).padStart(2, "0")}</span><span class="t"></span><span class="who"></span></a>`;
+  li.querySelector(".t").textContent = a.t;
+  li.querySelector(".who").textContent = "読者: " + a.who;
+  list.appendChild(li);
+});
+
+const cache = {};
+function prep(md) {
+  md = md.replace(/^---\n[\s\S]*?\n---\n/, "");
+  return md
+    .replace(/〔運営者名〕/g, "クワイエットベル（仮称）")
+    .replace(/〔製品名〕/g, "許認可台帳（仮称・準備中）")
+    .replace(/〔記事5のURL〕/g, "[記事「定期届出一覧」](#a05)")
+    .replace(/〔記事6のURL〕/g, "[記事「台帳に持たせる項目」](#a06)");
+}
+function decorate(root) {
+  root.querySelectorAll("table").forEach(t => {
+    const w = document.createElement("div"); w.className = "tbl";
+    t.parentNode.insertBefore(w, t); w.appendChild(t);
+  });
+  root.querySelectorAll("a[href]").forEach(a => {
+    if (/^https?:/.test(a.getAttribute("href"))) { a.target = "_blank"; a.rel = "noopener"; }
+  });
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  const hits = [];
+  while (walker.nextNode()) if (walker.currentNode.nodeValue.includes("【要確認】")) hits.push(walker.currentNode);
+  hits.forEach(n => {
+    const frag = document.createDocumentFragment();
+    n.nodeValue.split("【要確認】").forEach((part, i, arr) => {
+      frag.appendChild(document.createTextNode(part));
+      if (i < arr.length - 1) { const m = document.createElement("mark"); m.className = "chk"; m.textContent = "【要確認】"; frag.appendChild(m); }
+    });
+    n.parentNode.replaceChild(frag, n);
+  });
+}
+async function show(id) {
+  const idx = ARTICLES.findIndex(a => a.id === id);
+  const home = document.getElementById("home"), view = document.getElementById("article"), doc = document.getElementById("doc");
+  if (idx < 0) { view.hidden = true; home.hidden = false; return; }
+  home.hidden = true; view.hidden = false; window.scrollTo(0, 0);
+  const a = ARTICLES[idx];
+  doc.innerHTML = '<p class="status">読み込み中…</p>';
+  try {
+    if (!cache[a.id]) {
+      const r = await fetch(a.file);
+      if (!r.ok) throw new Error(r.status);
+      cache[a.id] = prep(await r.text());
+    }
+    doc.innerHTML = marked.parse(cache[a.id]);
+    decorate(doc);
+  } catch (e) {
+    doc.innerHTML = '<p class="status">記事を読み込めませんでした。ページを再読み込みしてください。</p>';
+  }
+  const pager = document.getElementById("pager"); pager.innerHTML = "";
+  const prev = ARTICLES[idx - 1], next = ARTICLES[idx + 1];
+  pager.insertAdjacentHTML("beforeend", prev ? `<a href="#${prev.id}">← 前の記事</a>` : "<span></span>");
+  pager.insertAdjacentHTML("beforeend", next ? `<a href="#${next.id}">次の記事 →</a>` : "<span></span>");
+}
+function route() {
+  const h = location.hash.slice(1);
+  if (/^a0[1-7]$/.test(h)) show(h);
+  else {
+    document.getElementById("article").hidden = true;
+    document.getElementById("home").hidden = false;
+    if (h) { const el = document.getElementById(h); if (el) el.scrollIntoView(); }
+  }
+}
+window.addEventListener("hashchange", route);
+route();
+</script>
