@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>許認可 期限計算機</title>
+<meta name="description" content="許可の種類・許可行政庁・満了日から、更新の受付開始日・申請期限・決算変更届などの期限を、条文と手引の出典つきで計算します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Old+Mincho:wght@600;900&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+:root {
+  --paper: #f6f7f8; --sheet: #ffffff; --ink: #1d2733; --muted: #5b6878; --rule: #d5dbe2;
+  --indigo: #27466e; --indigo-soft: #e6edf6; --due: #a35a00; --due-soft: #fbf1e3;
+  --f-display: "Zen Old Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --f-body: "BIZ UDPGothic", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #12171d; --sheet: #182029; --ink: #e3e8ee; --muted: #9aa7b6; --rule: #2c3743;
+    --indigo: #9dbbe3; --indigo-soft: #1f2d3e; --due: #f0b35c; --due-soft: #2e2416; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #12171d; --sheet: #182029; --ink: #e3e8ee; --muted: #9aa7b6; --rule: #2c3743;
+  --indigo: #9dbbe3; --indigo-soft: #1f2d3e; --due: #f0b35c; --due-soft: #2e2416; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--f-body); font-size: 16px; line-height: 1.85;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 0 48px; }
+a { color: var(--indigo); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible { outline: 2px solid var(--indigo); outline-offset: 2px; }
+.wrap { max-width: 1040px; margin: 0 auto; }
+.notice { margin: 16px auto 0; background: var(--due-soft); border: 1px solid var(--due); border-radius: 4px; padding: 10px 14px; font-size: 14px; line-height: 1.7; }
+.notice strong { color: var(--due); }
+header.site { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; padding-block: 28px 18px; border-bottom: 2px solid var(--ink); }
+.brand { font-family: var(--f-display); font-weight: 900; font-size: 26px; letter-spacing: .04em; text-decoration: none; color: var(--ink); }
+.brand small { font-family: var(--f-body); font-weight: 400; font-size: 13px; color: var(--muted); margin-left: 8px; letter-spacing: 0; }
+nav.top { display: flex; flex-wrap: wrap; gap: 4px 20px; font-size: 14px; }
+nav.top a { color: var(--ink); text-decoration: none; }
+nav.top a:hover { color: var(--indigo); text-decoration: underline; }
+h1 { font-family: var(--f-display); font-weight: 900; font-size: 30px; line-height: 1.4; margin: 36px 0 8px; }
+.lead { color: var(--muted); margin: 0 0 24px; max-width: 70ch; }
+.panel { background: var(--sheet); border: 1px solid var(--rule); border-radius: 6px; padding: 20px; margin-bottom: 24px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px 20px; }
+label { display: block; font-size: 13px; color: var(--muted); font-weight: 700; margin-bottom: 4px; }
+select, input[type=date] { width: 100%; font: inherit; font-size: 15px; padding: 8px 10px; border: 1px solid var(--rule); border-radius: 4px; background: var(--paper); color: var(--ink); }
+.hint { font-size: 12.5px; color: var(--muted); margin: 4px 0 0; line-height: 1.6; }
+.row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 16px; }
+button { font: inherit; font-size: 15px; padding: 9px 18px; border-radius: 4px; border: 1px solid var(--indigo); background: var(--indigo); color: #fff; cursor: pointer; }
+button.ghost { background: transparent; color: var(--indigo); }
+h2 { font-family: var(--f-display); font-size: 20px; margin: 28px 0 10px; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+h2 span { font-family: var(--f-mono); font-size: 12px; letter-spacing: .12em; color: var(--muted); }
+.tbl { overflow-x: auto; margin: 10px 0 18px; border: 1px solid var(--rule); border-radius: 4px; background: var(--sheet); }
+table { border-collapse: collapse; font-size: 13.5px; line-height: 1.65; min-width: 720px; width: 100%; }
+th, td { border-bottom: 1px solid var(--rule); padding: 8px 10px; vertical-align: top; text-align: left; }
+th { background: var(--indigo-soft); font-weight: 700; white-space: nowrap; }
+tr:last-child td { border-bottom: 0; }
+td.d { font-family: var(--f-mono); white-space: nowrap; font-size: 14px; }
+td.d.none { font-family: var(--f-body); color: var(--muted); }
+.tag { display: inline-block; font-size: 11.5px; padding: 0 7px; border-radius: 3px; background: var(--due-soft); color: var(--due); border: 1px solid var(--due); margin-left: 6px; line-height: 1.7; white-space: nowrap; }
+.src { font-size: 12.5px; color: var(--muted); }
+.src a { word-break: break-all; }
+.empty { color: var(--muted); padding: 18px 0; }
+.line { font-size: 13.5px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 12px; margin-top: 24px; }
+.cta { background: var(--indigo-soft); border-radius: 6px; padding: 16px 20px; margin-top: 28px; }
+.cta p { margin: 0 0 6px; }
+footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; margin-top: 40px; padding-top: 14px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--muted); }
+@media (max-width: 760px) { h1 { font-size: 24px; } .panel { padding: 16px; } }
+</style>
+</head>
+<body>
+<div class="notice wrap"><strong>仮公開</strong>　運営法人は設立準備中です（2026年11月設立予定）。社名は仮称で、登記後に正式名称・所在地・連絡先へ差し替えます。</div>
+<div class="wrap">
+  <header class="site">
+    <a class="brand" href="./">クワイエットベル<small>株式会社クワイエットベル（仮称）</small></a>
+    <nav class="top" aria-label="サイト内">
+      <a href="./#service">サービス</a>
+      <a href="./#articles">記事</a>
+      <a href="calc.html" aria-current="page">期限計算機</a>
+      <a href="./#company">運営者</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>許認可 期限計算機</h1>
+    <p class="lead">許可の種類と満了日を入れると、法令の申請期限、許可行政庁の手引にある受付開始日と期限、満了後の扱い、決算変更届などの定期の期限を、出典と確認日つきで出します。計算は暦日で、閉庁日の繰り上げは反映しません。</p>
+
+    <div class="panel">
+      <div class="grid">
+        <div>
+          <label for="lic">許可の種類</label>
+          <select id="lic"></select>
+          <p class="hint" id="licHint"></p>
+        </div>
+        <div>
+          <label for="auth">許可行政庁（手引の期限）</label>
+          <select id="auth"></select>
+          <p class="hint" id="authHint"></p>
+        </div>
+        <div id="expWrap">
+          <label for="exp">許可の有効期間の満了日</label>
+          <input type="date" id="exp">
+          <p class="hint">許可通知書・許可証の「有効期間」の末日。</p>
+        </div>
+        <div id="fyWrap" hidden>
+          <label for="fy">直近の事業年度の終了日（決算日）</label>
+          <input type="date" id="fy">
+          <p class="hint" id="fyHint"></p>
+        </div>
+      </div>
+      <div class="row">
+        <button type="button" id="go">期限を出す</button>
+        <button type="button" class="ghost" id="copy" hidden>結果をテキストでコピー</button>
+        <span class="hint" id="copied"></span>
+      </div>
+    </div>
+
+    <div id="out"><p class="empty">許可の種類と満了日を入れてください。</p></div>
+
+    <div class="cta">
+      <p><strong>顧問先ごとの一覧で管理したい方へ</strong></p>
+      <p>許認可台帳（仮称・準備中）は、この計算を顧問先・許可ごとに並べ、期限が近づいたときだけ鳴らす台帳です。行政書士事務所向けに準備しています。</p>
+      <p class="src">設立後に窓口を掲載します</p>
+    </div>
+
+    <p class="line">期限の表示までが当社の範囲です。申請書類は作成しません（行政書士の業務です）。手引は改訂されるため、値ごとの確認日と出典をご覧のうえ、申請前に許可行政庁または専門家にご確認ください。「要確認」は原文で確かめきれていない値です。</p>
+  </main>
+
+  <footer>
+    <span>© 2026 クワイエットベル（仮称・設立準備中）</span>
+    <span>データ: 法令は e-Gov 法令検索、受付の扱いは各許可行政庁の手引。</span>
+  </footer>
+</div>
+
+<script>
+let RULES = null;
+const $ = id => document.getElementById(id);
+const pad = n => String(n).padStart(2, "0");
+const fmt = d => d ? `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}` : "";
+const parse = s => { if (!s) return null; const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); };
+const addDays = (d, n) => { const r = new Date(d); r.setDate(r.getDate() + n); return r; };
+// 民法143条: 期間の末日は起算日の応当日の前日。応当日が無い月は末日。
+function addMonthsPeriod(end, months) {
+  const start = addDays(end, 1);
+  const y = start.getFullYear(), m = start.getMonth() + months, day = start.getDate();
+  const last = new Date(y, m + 1, 0).getDate();
+  return addDays(new Date(y, m, Math.min(day, last)), -1);
+}
+const weekday = ["日", "月", "火", "水", "木", "金", "土"];
+const show = d => d ? `${fmt(d)}（${weekday[d.getDay()]}）` : "";
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const statusTag = s => s === "confirmed" || !s ? "" : `<span class="tag">要確認</span>`;
+const srcCell = (quote, url, retrieved) => `<span class="src">${esc(quote)}${url ? ` <a href="${esc(url)}" target="_blank" rel="noopener">出典</a>` : ""}${retrieved ? `（確認 ${esc(retrieved)}）` : ""}</span>`;
+const hasNum = v => v !== "" && v !== null && v !== undefined;
+
+function fillLicenses() {
+  const sel = $("lic");
+  RULES.licenses.forEach(l => {
+    const o = document.createElement("option"); o.value = l.id; o.textContent = l.name; sel.appendChild(o);
+  });
+  sel.value = "construction";
+}
+function current() { return RULES.licenses.find(x => x.id === $("lic").value); }
+function onLicense() {
+  const l = current();
+  const auth = $("auth"); auth.innerHTML = "";
+  const locals = RULES.local.filter(r => r.license_id === l.id);
+  const o0 = document.createElement("option"); o0.value = "";
+  o0.textContent = locals.length ? "法令の既定のみ（許可行政庁を選ばない）" : "法令の既定のみ（手引は未収録）";
+  auth.appendChild(o0);
+  locals.forEach((r, i) => { const o = document.createElement("option"); o.value = String(i); o.textContent = r.authority; auth.appendChild(o); });
+  $("authHint").textContent = locals.length ? `収録 ${locals.length} 件。未収録の許可行政庁は手引をご確認ください。` : "この許可は手引の期限をまだ収録していません。";
+  const hasTerm = !!l.valid_renewal;
+  $("expWrap").hidden = !hasTerm;
+  const fy = l.id === "construction" || l.id === "cargo_general" || l.id === "cargo_specific";
+  $("fyWrap").hidden = !fy;
+  $("fyHint").textContent = l.id === "construction"
+    ? "決算変更届（事業年度経過後 4 月以内）と経営事項審査の有効期間の目安を出します。"
+    : "事業報告書（事業年度経過後 100 日以内）の期限を出します。";
+  $("licHint").textContent = l.status === "pending"
+    ? "更新制は施行待ちです（公布から 3 年以内に施行）。現行は有効期間がありません。"
+    : !hasTerm ? "この許可には有効期間がありません。随時・定期の届出だけ出します。"
+    : `有効期間 ${l.valid_renewal} 年（${l.law}）。`;
+  $("out").innerHTML = '<p class="empty">満了日（または決算日）を入れて「期限を出す」を押してください。</p>';
+  $("copy").hidden = true; $("copied").textContent = "";
+}
+
+function compute() {
+  const l = current();
+  const locals = RULES.local.filter(r => r.license_id === l.id);
+  const loc = $("auth").value === "" ? null : locals[Number($("auth").value)];
+  const exp = parse($("exp").value), fy = parse($("fy").value);
+  const rows = [];
+  const push = (label, d, note, quote, url, retrieved, status) => rows.push({ label, d, note, quote, url, retrieved, status });
+
+  if (l.valid_renewal) {
+    if (!exp) { $("out").innerHTML = '<p class="empty">満了日を入れてください。</p>'; return; }
+    if (hasNum(l.window_start_days)) push("法令上の受付開始", addDays(exp, -l.window_start_days), `満了 ${l.window_start_days} 日前から`, l.basis, l.basis_url, l.retrieved, l.status);
+    if (hasNum(l.deadline_days)) push("法令上の申請期限", addDays(exp, -l.deadline_days), `満了 ${l.deadline_days} 日前まで`, l.basis, l.basis_url, l.retrieved, l.status);
+    else push("法令上の申請期限", null, l.deadline_source === "local" ? "法令に期限の定めなし。許可行政庁の手引による" : "法令に定めなし", l.basis, l.basis_url, l.retrieved, l.status);
+    if (loc) {
+      push(`手引の受付開始（${loc.authority}）`, hasNum(loc.accept_start_days) ? addDays(exp, -loc.accept_start_days) : null, loc.accept_start || "記載なし", loc.quote, loc.source_url, loc.retrieved, loc.status);
+      push(`手引の期限（${loc.authority}）`, hasNum(loc.deadline_guide_days) ? addDays(exp, -Number(loc.deadline_guide_days)) : null, loc.deadline_guide || "記載なし", loc.quote, loc.source_url, loc.retrieved, loc.status);
+      push("期限後の扱い", null, loc.late_acceptance || "手引に記載なし", "", loc.source_url, loc.retrieved, loc.status);
+    }
+    push("満了日", exp, "", "", "", "", "");
+    push("審査中のみなし有効", null,
+      l.deemed === "yes" ? "あり（期限内に申請すれば処分まで従前の許可が有効）" : l.deemed === "no" ? "なし（満了で失効。みなし規定なし）" : "未確認",
+      l.basis, l.basis_url, l.retrieved, l.status);
+    const yrs = parseInt(l.valid_renewal, 10);
+    if (yrs) { const n = new Date(exp); n.setFullYear(n.getFullYear() + yrs); push("更新後の次の満了日（目安）", n, `${l.valid_renewal} 年後。実際は許可行政庁の付与日で決まります`, "", "", "", ""); }
+  } else if (l.status === "pending") {
+    push("更新の期限", null, "更新制は施行待ち。施行日・初回更新の時期は政省令で決まります", l.basis, l.basis_url, l.retrieved, l.status);
+  } else {
+    push("更新の期限", null, "有効期間なし（更新はありません）", l.basis, l.basis_url, l.retrieved, l.status);
+  }
+
+  const filings = RULES.filings.filter(f => f.license_id === l.id);
+  const per = [];
+  const today = new Date();
+  filings.forEach(f => {
+    let d = null, note = f.deadline_rule;
+    if (f.filing_id === "construction_annual") { if (fy) d = addMonthsPeriod(fy, 4); else note += "（決算日を入れると日付が出ます）"; }
+    else if (f.filing_id === "construction_keishin") { if (fy) { d = addMonthsPeriod(fy, 19); note = "審査基準日（決算日）から 1 年 7 か月。結果通知の有効期間の末日の目安"; } else note += "（決算日を入れると日付が出ます）"; }
+    else if (f.filing_id === "cargo_business_report") { if (fy) d = addDays(fy, 100); else note += "（決算日を入れると日付が出ます）"; }
+    else if (f.filing_id === "cargo_results_report") { let d0 = new Date(today.getFullYear(), 6, 10); if (d0 < today) d0 = new Date(today.getFullYear() + 1, 6, 10); d = d0; note = "毎年 7 月 10 日（前年 4 月 1 日〜3 月 31 日分）。直近の期日を表示"; }
+    else if (f.filing_id === "minpaku_report") {
+      let m = today.getMonth(); // 0 始まり。偶数月(2,4,...)は m が奇数
+      let cand = new Date(today.getFullYear(), m % 2 === 1 ? m : m + 1, 15);
+      if (cand < today) cand = new Date(cand.getFullYear(), cand.getMonth() + 2, 15);
+      d = cand; note = "偶数月の 15 日までに前 2 か月分。直近の期日を表示";
+    }
+    per.push({ f, d, note });
+  });
+
+  let html = `<h2><span>RESULT</span>${esc(l.name)}${loc ? "／" + esc(loc.authority) : ""}</h2>
+  <div class="tbl"><table><thead><tr><th>項目</th><th>日付</th><th>内容</th><th>根拠・出典</th></tr></thead><tbody>`;
+  rows.forEach(r => { html += `<tr><td>${esc(r.label)}${statusTag(r.status)}</td><td class="d${r.d ? "" : " none"}">${r.d ? show(r.d) : "—"}</td><td>${esc(r.note)}</td><td>${srcCell(r.quote, r.url, r.retrieved)}</td></tr>`; });
+  html += `</tbody></table></div>`;
+  if (per.length) {
+    html += `<h2><span>FILINGS</span>定期・随時の届出</h2><div class="tbl"><table><thead><tr><th>届出</th><th>日付</th><th>期限の決まり</th><th>根拠</th></tr></thead><tbody>`;
+    per.forEach(({ f, d, note }) => {
+      html += `<tr><td>${esc(f.filing_name)}<br><span class="src">${f.kind === "periodic" ? "定期" : "随時"}：${esc(f.trigger)}</span></td><td class="d${d ? "" : " none"}">${d ? show(d) : (f.kind === "event" ? "事由の発生から" : "—")}</td><td>${esc(note)}</td><td>${srcCell(f.basis, f.basis_url, f.retrieved)}</td></tr>`;
+    });
+    html += `</tbody></table></div>`;
+  }
+  $("out").innerHTML = html;
+  $("copy").hidden = false; $("copied").textContent = "";
+  $("copy").onclick = async () => {
+    const lines = [`${l.name}${loc ? "／" + loc.authority : ""}${exp ? "　満了日 " + fmt(exp) : ""}${fy ? "　決算日 " + fmt(fy) : ""}`];
+    rows.forEach(r => lines.push(`${r.label}: ${r.d ? fmt(r.d) : "-"} ${r.note}${r.url ? " " + r.url : ""}`));
+    per.forEach(({ f, d, note }) => lines.push(`${f.filing_name}: ${d ? fmt(d) : "-"} ${note}`));
+    lines.push(`（${location.href} で計算。閉庁日は未反映。申請前に許可行政庁へ確認）`);
+    try { await navigator.clipboard.writeText(lines.join("\n")); $("copied").textContent = "コピーしました"; }
+    catch (e) { $("copied").textContent = "コピーできませんでした"; }
+  };
+}
+
+(async () => {
+  try {
+    const r = await fetch("rules.json"); if (!r.ok) throw new Error(r.status);
+    RULES = await r.json();
+    fillLicenses(); onLicense();
+    $("lic").addEventListener("change", onLicense);
+    $("go").addEventListener("click", compute);
+    ["exp", "fy", "auth"].forEach(id => $(id).addEventListener("change", () => { if ($("exp").value || $("fy").value) compute(); }));
+  } catch (e) {
+    $("out").innerHTML = '<p class="empty">ルールを読み込めませんでした。ページを再読み込みしてください。</p>';
+  }
+})();
+</script>
+</body>
+</html>
