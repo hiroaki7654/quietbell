@@ -144,12 +144,12 @@ footer { margin-top: 40px; padding-top: 18px; border-top: 2px solid var(--ink); 
 </style>
 
 <div class="notice" role="note">
-  <strong>設立準備中の仮公開です。</strong>「株式会社クワイエットベル」は仮称で、登記はまだしていません（2026年11月設立予定）。サービスは準備中で、お申し込み・お問い合わせはまだ受け付けていません。
+  <strong>サービスは準備中です。</strong>台帳のお申し込みはまだ受け付けていません。記事の誤りのご連絡・お問い合わせは、下記の運営者の窓口へお願いします。
 </div>
 
 <div class="wrap">
   <header class="site">
-    <a class="brand" href="#top">クワイエットベル<small>株式会社クワイエットベル（仮称）</small></a>
+    <a class="brand" href="#top">クワイエットベル<small>運営 Zephyr Traders</small></a>
     <nav class="top" aria-label="ページ内">
       <a href="#service">サービス</a>
       <a href="#articles">記事</a>
@@ -208,11 +208,13 @@ footer { margin-top: 40px; padding-top: 18px; border-top: 2px solid var(--ink); 
       <h2><span>COMPANY</span>運営者</h2>
       <div class="body">
         <dl class="company">
-          <dt>商号</dt><dd>株式会社クワイエットベル<span class="tag">仮称</span><br><span style="font-size:13px;color:var(--muted)">英文表記 Quietbell Inc.</span></dd>
-          <dt>設立</dt><dd>2026年11月予定<span class="tag">未登記</span></dd>
-          <dt>所在地</dt><dd>設立後に掲載します</dd>
+          <dt>サービス名</dt><dd>クワイエットベル</dd>
+          <dt>運営者</dt><dd>Zephyr Traders（個人事業）</dd>
+          <dt>代表者</dt><dd>上條弘明</dd>
+          <dt>所在地</dt><dd>長野県松本市中央1-4-7 上條ビル2階南</dd>
           <dt>事業</dt><dd>許認可の期限・証憑を管理するソフトウェアの開発と提供（準備中）</dd>
-          <dt>お問い合わせ</dt><dd>設立後に窓口を掲載します</dd>
+          <dt>お問い合わせ</dt><dd>info.zephyr.traders@gmail.com</dd>
+          <dt>個人情報</dt><dd><a href="privacy.html">プライバシーポリシー</a></dd>
         </dl>
       </div>
     </section>
@@ -225,7 +227,8 @@ footer { margin-top: 40px; padding-top: 18px; border-top: 2px solid var(--ink); 
   </div>
 
   <footer>
-    <span>© 2026 クワイエットベル（仮称・設立準備中）</span>
+    <span>© 2026 クワイエットベル ／ 運営 Zephyr Traders（代表 上條弘明）</span>
+    <span>所在地: 長野県松本市中央1-4-7 上條ビル2階南 ／ お問い合わせ: info.zephyr.traders@gmail.com ／ <a href="privacy.html">プライバシーポリシー</a></span>
     <span>記事の内容は最終確認日時点のものです。</span>
   </footer>
 </div>
@@ -254,8 +257,10 @@ const cache = {};
 function prep(md) {
   md = md.replace(/^---\n[\s\S]*?\n---\n/, "");
   return md
-    .replace(/〔運営者名〕/g, "クワイエットベル（仮称）")
-    .replace(/〔製品名〕/g, "許認可台帳（仮称・準備中）")
+    .replace(/運営: 〔運営者名〕/g, "運営: Zephyr Traders（代表 上條弘明）")
+    .replace(/^〔運営者名〕$/gm, "Zephyr Traders（代表 上條弘明）")
+    .replace(/〔運営者名〕/g, "クワイエットベル（運営 Zephyr Traders）")
+    .replace(/〔製品名〕/g, "許認可台帳")
     .replace(/〔記事5のURL〕/g, "[記事「定期届出一覧」](#a05)")
     .replace(/〔記事6のURL〕/g, "[記事「台帳に持たせる項目」](#a06)");
 }
