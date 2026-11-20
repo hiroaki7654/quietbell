@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>デモ 許認可更新管理</title>
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <a class="brand" href="../index.html">クワイエットベル<small>運営 Zephyr Traders</small></a>
+    <nav class="top" aria-label="サイト内">
+      <a href="../index.html">トップ</a>
+      <a href="../calc.html">期限計算機</a>
+      <a href="../privacy.html">プライバシーポリシー</a>
+    </nav>
+  </header>
+
+  <div class="band" id="band">
+    <p class="band-text"><strong>デモ・架空のデータです。実際の顧問先の情報を入れないでください。入力した内容はこのブラウザの中だけにあり、どこにも送信されません。</strong></p>
+    <div class="band-ctl">
+      <div class="seg" role="group" aria-label="画面の立場">
+        <button type="button" id="roleOffice" aria-pressed="true">事務所の画面</button>
+        <button type="button" id="roleClient" aria-pressed="false">顧問先の画面</button>
+      </div>
+      <button type="button" class="ghost" id="reset">最初の状態に戻す</button>
+      <span class="hint" id="resetMsg" role="status"></span>
+    </div>
+  </div>
+
+  <nav class="tabs" id="tabs" aria-label="画面"></nav>
+  <main id="view" tabindex="-1"><p class="empty">読み込み中です。</p></main>
+
+  <footer>
+    <span>© 2026 クワイエットベル ／ 運営 Zephyr Traders</span>
+    <span><a href="../index.html">トップ</a> ／ <a href="../calc.html">期限計算機</a> ／ <a href="../privacy.html">プライバシーポリシー</a></span>
+  </footer>
+</div>
+
+<script src="../date-core.js"></script>
+<script src="model.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

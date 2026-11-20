@@ -44,7 +44,7 @@
    "deadline_source": "none",
    "deemed": "no",
    "status": "confirmed",
-   "basis": "法22条の2第3項(5年)・22条の3(更新)。更新時は申請前6月以内の法定講習(22条の2第2項準用)。法令に更新申請の期限の定めなし（2026-10-21 /source-check で確認）",
+   "basis": "法22条の2第3項(5年)・22条の3(更新)。更新時は申請前6月以内の法定講習(22条の2第2項準用)。法令に更新申請の期限の定めなし（2026-10-21 確認）",
    "basis_url": "https://laws.e-gov.go.jp/law/327AC1000000176",
    "retrieved": "2026-10-21"
   },
@@ -92,7 +92,7 @@
    "deadline_source": "local",
    "deemed": "yes",
    "status": "confirmed",
-   "basis": "法14条の4第2〜4項(5年・みなし有効)・令6条の13(5年。更新時に優良基準に適合すると認められた場合は7年)。更新申請の期限は法令になし→手引による（2026-10-21 /source-check で確認）",
+   "basis": "法14条の4第2〜4項(5年・みなし有効)・令6条の13(5年。更新時に優良基準に適合すると認められた場合は7年)。更新申請の期限は法令になし→手引による（2026-10-21 確認）",
    "basis_url": "https://laws.e-gov.go.jp/law/345AC0000000137",
    "retrieved": "2026-10-21"
   },
@@ -108,7 +108,7 @@
    "deadline_source": "pending_ordinance",
    "deemed": "",
    "status": "pending",
-   "basis": "現行は有効期間なし。令和7年法60号で5年更新制(新6条の2)・みなし有効あり。施行日は附則1条により「公布の日から起算して三年を超えない範囲内において政令で定める日」(e-Gov の施行予定日は2028-06-10、国交省資料は令和10年6月までに施行)。更新期限と既存業者の初回期限は国交省令(2026-10-12時点で施行期日政令・省令とも未制定。2026-10-21 時点も施行日は未確定。lic-m43で追跡)",
+   "basis": "現行は有効期間なし。令和7年法60号で5年更新制(新6条の2)・みなし有効あり。施行日は附則1条により「公布の日から起算して三年を超えない範囲内において政令で定める日」(e-Gov の施行予定日は2028-06-10、国交省資料は令和10年6月までに施行)。更新期限と既存業者の初回期限は国交省令(2026-10-12時点で施行期日政令・省令とも未制定。2026-10-21 時点も施行日は未確定)",
    "basis_url": "https://laws.e-gov.go.jp/law/401AC0000000083/20280610_507AC1000000060",
    "retrieved": "2026-10-21"
   },
@@ -156,7 +156,7 @@
    "deadline_source": "local",
    "deemed": "yes",
    "status": "confirmed",
-   "basis": "法3条2項(5年)・3条4項(みなし有効)。施行規則(345M50000400103)に更新申請の期限なし(全文検索で確認)→手引による。法・施行令・施行規則に更新申請の期限なしを確定（2026-10-21 /source-check で確認）",
+   "basis": "法3条2項(5年)・3条4項(みなし有効)。施行規則(345M50000400103)に更新申請の期限なし→手引による。法・施行令・施行規則に更新申請の期限なしを確定（2026-10-21 確認）",
    "basis_url": "https://laws.e-gov.go.jp/law/345AC1000000096",
    "retrieved": "2026-10-21"
   },
@@ -188,7 +188,7 @@
    "deadline_source": "law",
    "deemed": "yes",
    "status": "confirmed",
-   "basis": "法22条2項(5年)・22条3項(みなし有効)。国交省関係施行規則(429M60000800065)3条: 満了90日前から30日前まで（2026-10-21 /source-check で確認）",
+   "basis": "法22条2項(5年)・22条3項(みなし有効)。国交省関係施行規則(429M60000800065)3条: 満了90日前から30日前まで（2026-10-21 確認）",
    "basis_url": "https://laws.e-gov.go.jp/law/429AC0000000065",
    "retrieved": "2026-10-21"
   },
@@ -204,7 +204,7 @@
    "deadline_source": "law",
    "deemed": "yes",
    "status": "confirmed",
-   "basis": "法46条2項(5年)・46条3項(みなし有効)。国交省関係施行規則(429M60000800065)25条: 満了90日前から60日前まで（2026-10-21 /source-check で確認）",
+   "basis": "法46条2項(5年)・46条3項(みなし有効)。国交省関係施行規則(429M60000800065)25条: 満了90日前から60日前まで（2026-10-21 確認）",
    "basis_url": "https://laws.e-gov.go.jp/law/429AC0000000065",
    "retrieved": "2026-10-21"
   },
@@ -252,7 +252,7 @@
    "deadline_source": "law",
    "deemed": "no",
    "status": "confirmed",
-   "basis": "法33条(5年)。施行規則25条が22条1項を準用し満了3月前まで(日数は90で近似)。みなし規定なし(33条が準用する32条の6に該当項なし)。期限管理のみ（2026-10-21 /source-check で確認）",
+   "basis": "法33条(5年)。施行規則25条が22条1項を準用し満了3月前まで(日数は90で近似)。みなし規定なし(33条が準用する32条の6に該当項なし)。期限管理のみ（2026-10-21 確認）",
    "basis_url": "https://laws.e-gov.go.jp/law/322AC0000000141",
    "retrieved": "2026-10-21"
   },
@@ -316,7 +316,7 @@
    "deadline_source": "none",
    "deemed": "",
    "status": "confirmed",
-   "basis": "9条を読了: 有効期間・更新の定めなし。9条2項に臨時販売場の期限付き免許あり（2026-10-21 /source-check で確認）",
+   "basis": "9条: 有効期間・更新の定めなし。9条2項に臨時販売場の期限付き免許あり（2026-10-21 確認）",
    "basis_url": "https://laws.e-gov.go.jp/law/328AC0000000006",
    "retrieved": "2026-10-21"
   }
@@ -334,7 +334,7 @@
    "deadline_guide_months": "",
    "deadline_guide_count": "",
    "late_acceptance": "",
-   "quote": "「「更新」 : 許可の有効期間が満了する日の30日前まで(申請の受付は目安としては3ヶ月前から)。」／同時申請は6か月前まで(手引 令和7年12月更新 PDF p.19、2026-10-21 照合)",
+   "quote": "「「更新」 : 許可の有効期間が満了する日の30日前まで(申請の受付は目安としては3ヶ月前から)。」／同時申請は6か月前まで(手引 令和7年12月更新 PDF p.19、2026-10-21 確認)",
    "source_url": "https://www.ktr.mlit.go.jp/ktr_content/content/000877206.pdf",
    "retrieved": "2026-10-21",
    "status": "confirmed"
@@ -385,7 +385,7 @@
    "deadline_guide_months": "",
    "deadline_guide_count": "",
    "late_acceptance": "記載なし",
-   "quote": "「更新の申請は、従前の許可の有効期間が満了する３０日前までに更新の申請を行うことが必要です。」(北陸地整 建政部 建設業許可ページ 令和2年4月1日更新)／「許可の更新を受けようとする場合は、有効期間満了の日前３０日までに許可申請書を提出する必要があります。」(建設業者のための建設業法 令和7年2月改訂版 p.4)。局は手引を公開しておらず、ページ・小冊子・提出書類一覧(2502_02)のいずれにも受付開始の記載なし。電話確認が要る",
+   "quote": "「更新の申請は、従前の許可の有効期間が満了する３０日前までに更新の申請を行うことが必要です。」(北陸地整 建政部 建設業許可ページ 令和2年4月1日更新)／「許可の更新を受けようとする場合は、有効期間満了の日前３０日までに許可申請書を提出する必要があります。」(建設業者のための建設業法 令和7年2月改訂版 p.4)。局は手引を公開しておらず、ページ・小冊子・提出書類一覧(2502_02)のいずれにも受付開始の記載なし",
    "source_url": "https://www.hrr.mlit.go.jp/kensei/sangyo/kensetsu/kyoka/kensetsu_01.html",
    "retrieved": "2026-10-12",
    "status": "partial"
@@ -402,7 +402,7 @@
    "deadline_guide_months": "",
    "deadline_guide_count": "",
    "late_acceptance": "記載なし",
-   "quote": "「有効期間が満了する３０日前までに更新の許可申請書を提出しなければなりません。（この日が行政庁の休日に該当する場合は直後の開庁日までに提出）」(建設業許可の手引き 令和8年3月 印刷p.3)。手引全45頁に受付開始の記載なし。電話確認が要る／同時申請(列⑦〜⑨)は申請書類一覧 PDF p.12 の「提出時期」行「６ヶ月前まで」(2026-10-21 照合)",
+   "quote": "「有効期間が満了する３０日前までに更新の許可申請書を提出しなければなりません。（この日が行政庁の休日に該当する場合は直後の開庁日までに提出）」(建設業許可の手引き 令和8年3月 印刷p.3)。手引全45頁に受付開始の記載なし／同時申請(列⑦〜⑨)は申請書類一覧 PDF p.12 の「提出時期」行「６ヶ月前まで」(2026-10-21 確認)",
    "source_url": "https://www.cbr.mlit.go.jp/kensei/info/license/pdf/tebiki2603.pdf",
    "retrieved": "2026-10-21",
    "status": "partial"
@@ -419,7 +419,7 @@
    "deadline_guide_months": "",
    "deadline_guide_count": "",
    "late_acceptance": "記載なし",
-   "quote": "「「更新」：前記５のとおり、許可の有効期間が満了する日の３０日前までに申請書類を提出して下さい。」「※ 申請期限が過ぎてから申請することのないよう十分ご注意願います。」(建設業許可申請の手引き 令和8年3月 印刷p.4)。手引全93頁に受付開始の記載なし。電話確認が要る／同時申請は6か月前まで(印刷p.4(PDF p.5)、PDF p.16 の表「原則として…６ヶ月前まで」、2026-10-21 照合)",
+   "quote": "「「更新」：前記５のとおり、許可の有効期間が満了する日の３０日前までに申請書類を提出して下さい。」「※ 申請期限が過ぎてから申請することのないよう十分ご注意願います。」(建設業許可申請の手引き 令和8年3月 印刷p.4)。手引全93頁に受付開始の記載なし／同時申請は6か月前まで(印刷p.4(PDF p.5)、PDF p.16 の表「原則として…６ヶ月前まで」、2026-10-21 確認)",
    "source_url": "https://www.kkr.mlit.go.jp/kensei/kensetsu/daizinkyoka_sinsa/qgl8vl0000003jvl-att/sinkyokasinseinotebiki.pdf",
    "retrieved": "2026-10-21",
    "status": "partial"
@@ -436,7 +436,7 @@
    "deadline_guide_months": "",
    "deadline_guide_count": "",
    "late_acceptance": "記載なし",
-   "quote": "「許可の有効期間が満了する３０日前まで ※更新の受付は許可の有効期限の３ヶ月前を目安とする。」(建設業許可申請の手引き 令和8年4月改訂 印刷p.11 申請区分の表「5.更新」。令和5年1月版の後継)／同時申請(区分7〜9)は8ヶ月前目安で受付、6か月前まで(印刷p.11(PDF p.13)、2026-10-21 照合)",
+   "quote": "「許可の有効期間が満了する３０日前まで ※更新の受付は許可の有効期限の３ヶ月前を目安とする。」(建設業許可申請の手引き 令和8年4月改訂 印刷p.11 申請区分の表「5.更新」。令和5年1月版の後継)／同時申請(区分7〜9)は8ヶ月前目安で受付、6か月前まで(印刷p.11(PDF p.13)、2026-10-21 確認)",
    "source_url": "https://www.cgr.mlit.go.jp/kensei/tetsuduki/kyoka/data/kyokatebiki260401.pdf",
    "retrieved": "2026-10-21",
    "status": "confirmed"
@@ -453,7 +453,7 @@
    "deadline_guide_months": "",
    "deadline_guide_count": "",
    "late_acceptance": "記載なし",
-   "quote": "「引き続き建設業を営もうとする場合には、期間が満了する30日前までに、許可の更新の手続きをとらなければなりません。」(建設業許可の手引 令和7年12月版 印刷p.3)。手引全48頁に受付開始の記載なし。電話確認が要る／同時申請は申請書類一覧 PDF p.13「有効期間の６ヶ月前迄」(2026-10-21 照合)／一覧ページ(02-ukeruuketaato/ の Excel 書き出し index.files/sheet001.html)は「満了する30日前までに更新申請」のみ、建設業許可Q&A(qa-kyoka/index.files/sheet001.html)にも受付開始の記載なし。Q&A は大臣許可の標準処理期間を「おおむね90日程度を目安」と書く(2026-10-28 確認)",
+   "quote": "「引き続き建設業を営もうとする場合には、期間が満了する30日前までに、許可の更新の手続きをとらなければなりません。」(建設業許可の手引 令和7年12月版 印刷p.3)。手引全48頁に受付開始の記載なし／同時申請は申請書類一覧 PDF p.13「有効期間の６ヶ月前迄」(2026-10-21 確認)／一覧ページ(02-ukeruuketaato/ の Excel 書き出し index.files/sheet001.html)は「満了する30日前までに更新申請」のみ、建設業許可Q&A(qa-kyoka/index.files/sheet001.html)にも受付開始の記載なし。Q&A は大臣許可の標準処理期間を「おおむね90日程度を目安」と書く(2026-10-28 確認)",
    "source_url": "https://www.skr.mlit.go.jp/kensei/sangyou/01_kensetu/02-ukeruuketaato/2512_kyokatebiki.pdf",
    "retrieved": "2026-10-21",
    "status": "partial"
@@ -470,7 +470,7 @@
    "deadline_guide_months": 1,
    "deadline_guide_count": "",
    "late_acceptance": "記載なし",
-   "quote": "「提出時期 … ⑤更新 ３～１ヶ月前」(早見表① R7.12版 PDF p.1)。原文は早見表の「提出時期」欄の範囲で、受付開始・期限の語はない(2026-10-21 照合。画像で確認)／同時申請(早見表⑦〜⑨)は「６ヶ月前まで」",
+   "quote": "「提出時期 … ⑤更新 ３～１ヶ月前」(早見表① R7.12版 PDF p.1)。原文は早見表の「提出時期」欄の範囲で、受付開始・期限の語はない(2026-10-21 確認)／同時申請(早見表⑦〜⑨)は「６ヶ月前まで」",
    "source_url": "https://www.qsr.mlit.go.jp/n-park/construction/pdf/hayami.pdf",
    "retrieved": "2026-10-21",
    "status": "partial"
@@ -487,7 +487,7 @@
    "deadline_guide_months": "",
    "deadline_guide_count": "",
    "late_acceptance": "記載なし",
-   "quote": "「許可の更新を受けようとする者は、有効期間満了の日の三十日前までに許可申請書を提出しなければならない。」(建設業法施行規則5条、e-Gov)。局の建設業ページは本省ページと許可事務ガイドラインへのリンクのみで、受付開始・局の期限の記載なし。電話確認が要る",
+   "quote": "「許可の更新を受けようとする者は、有効期間満了の日の三十日前までに許可申請書を提出しなければならない。」(建設業法施行規則5条、e-Gov)。局の建設業ページは本省ページと許可事務ガイドラインへのリンクのみで、受付開始・局の期限の記載なし",
    "source_url": "https://www.ogb.go.jp/kaiken/5636/005638",
    "retrieved": "2026-10-12",
    "status": "partial"
@@ -521,7 +521,7 @@
    "deadline_guide_months": "",
    "deadline_guide_count": "",
    "late_acceptance": "満了後は更新不可・新規申請",
-   "quote": "「許可の更新申請は、期間満了日の３か月前から受け付けていますので、許可を更新する場合は、期間満了日の３０日前までに申請してください。」(令和8年3月30日改定版 PDF p.102 FAQ Q2)／「有効期間満了の日を過ぎた場合、更新申請の受付はできず、新規申請となります」(同 PDF p.9。受付開始・期限の値は旧版(令和6年12月改定)と同じ、2026-10-21 照合)",
+   "quote": "「許可の更新申請は、期間満了日の３か月前から受け付けていますので、許可を更新する場合は、期間満了日の３０日前までに申請してください。」(令和8年3月30日改定版 PDF p.102 FAQ Q2)／「有効期間満了の日を過ぎた場合、更新申請の受付はできず、新規申請となります」(同 PDF p.9。2026-10-21 確認)",
    "source_url": "https://www.pref.osaka.lg.jp/documents/8330/kyoka_tebik_r0803.pdf",
    "retrieved": "2026-10-21",
    "status": "confirmed"
@@ -554,7 +554,7 @@
    "deadline_guide_days": 30,
    "deadline_guide_months": "",
    "deadline_guide_count": "",
-   "late_acceptance": "満了後は失効・新規許可が必要(手引 PDF p.51、2026-10-21 照合)",
+   "late_acceptance": "満了後は失効・新規許可が必要(手引 PDF p.51、2026-10-21 確認)",
    "quote": "「※更新の申請は許可期限満了日の3ヶ月前から受付しています。」(手引PART.1 印刷p.50)",
    "source_url": "https://www.pref.nagano.lg.jp/kensetsu/infra/kensetsu/kyoka/kyoka/documents/tebiki_1.pdf",
    "retrieved": "2026-10-21",
@@ -571,7 +571,7 @@
    "deadline_guide_days": 30,
    "deadline_guide_months": 1,
    "deadline_guide_count": "",
-   "late_acceptance": "有効期間内なら受け付ける(満了日が閉庁日ならその前日の開庁日まで)。受付済なら更新の可否が明らかになるまで現在の許可が有効と案内(Q4。30日前を過ぎた申請に限った記述ではない)",
+   "late_acceptance": "有効期間内なら受け付ける(満了日が閉庁日ならその前日の開庁日まで)。受付済なら更新の可否が明らかになるまで現在の許可が有効と案内(Q&A Q4)",
    "quote": "「許可満了の３ヶ月前から受け付けますが、遅くとも１ヶ月前までに申請してください。但し、１ヶ月前を過ぎて許可の有効期間内（有効期間満了日が閉庁日（土、日、祝日、年末年始）の場合はその前日の開庁日まで）であれば受け付けています。」(Q&A Q3)／「更新申請を受付済の場合は、更新の可否が明らかになるまでは、有効期限が過ぎても現在の許可が有効です。」(Q&A Q4)",
    "source_url": "https://www.pref.fukuoka.lg.jp/contents/oshiete2020.html",
    "retrieved": "2026-10-21",
@@ -589,7 +589,7 @@
    "deadline_guide_months": "",
    "deadline_guide_count": "",
    "late_acceptance": "記載なし",
-   "quote": "「更新申請の場合は、許可の有効年月日の4 か月前から申請できます。」「申請日は御予約の電話をいただいた日から1～2 か月以上先になる場合があります。」(収集運搬業許可申請の手引 新規・更新用 令和5年11月 p.1)。同手引・局ページ・よくある質問(2023-03-30更新)に提出期限の記載なし。電話確認が要る",
+   "quote": "「更新申請の場合は、許可の有効年月日の4 か月前から申請できます。」「申請日は御予約の電話をいただいた日から1～2 か月以上先になる場合があります。」(収集運搬業許可申請の手引 新規・更新用 令和5年11月 p.1)。同手引・局ページ・よくある質問(2023-03-30更新)に提出期限の記載なし",
    "source_url": "https://www.kankyo.metro.tokyo.lg.jp/documents/d/kankyo/01_syuun_shinki_koushin_0511-pdf",
    "retrieved": "2026-10-12",
    "status": "partial"
@@ -657,7 +657,7 @@
    "deadline_guide_months": "",
    "deadline_guide_count": "",
    "late_acceptance": "",
-   "quote": "表の列見出し「提出時期」・許可更新の欄「許可期限の概ね60日前※２」、※２「県、北九州市、福岡市、久留米市で取扱いが異なる場合があります」(各種申請等の資料 attachment/281545 p.3)。県の申請案内・ふくおか電子申請の詳細説明PDFにも日数の記載なし。電話確認が要る",
+   "quote": "表の列見出し「提出時期」・許可更新の欄「許可期限の概ね60日前※２」、※２「県、北九州市、福岡市、久留米市で取扱いが異なる場合があります」(各種申請等の資料 attachment/281545 p.3)。県の申請案内・ふくおか電子申請の詳細説明PDFにも日数の記載なし",
    "source_url": "https://www.pref.fukuoka.lg.jp/uploaded/attachment/281545.pdf",
    "retrieved": "2026-10-12",
    "status": "partial"
@@ -708,7 +708,7 @@
    "deadline_guide_months": "",
    "deadline_guide_count": "",
    "late_acceptance": "",
-   "quote": "収集運搬と共通の表(attachment/281545 p.3)の「提出時期」欄に「許可期限の概ね60日前」のみ。電話確認が要る",
+   "quote": "収集運搬と共通の表(attachment/281545 p.3)の「提出時期」欄に「許可期限の概ね60日前」のみ",
    "source_url": "https://www.pref.fukuoka.lg.jp/uploaded/attachment/281545.pdf",
    "retrieved": "2026-10-12",
    "status": "partial"
@@ -725,7 +725,7 @@
    "deadline_guide_months": "",
    "deadline_guide_count": "",
    "late_acceptance": "記載なし",
-   "quote": "「更新許可申請の場合、事前計画書は許可期限の６か月前から提出できます。余裕を持って御提出ください。（予約日は、１～２か月先になることがあります。）」(事前計画書作成の手引 処分業 中間処理施設用 令和3年4月 p.2)。許可申請の手引(新規・更新用 令和3年5月)p.1〜2は事前計画書の先行・水曜受付・標準処理期間60日のみで受付期間の記載なし。電話確認が要る",
+   "quote": "「更新許可申請の場合、事前計画書は許可期限の６か月前から提出できます。余裕を持って御提出ください。（予約日は、１～２か月先になることがあります。）」(事前計画書作成の手引 処分業 中間処理施設用 令和3年4月 p.2)。許可申請の手引(新規・更新用 令和3年5月)p.1〜2は事前計画書の先行・水曜受付・標準処理期間60日のみで受付期間の記載なし",
    "source_url": "https://www.kankyo.metro.tokyo.lg.jp/documents/d/kankyo/on_processor-license_application-files-r3-4jizenkeikakusyo_syobun-1",
    "retrieved": "2026-10-12",
    "status": "unconfirmed"
@@ -742,7 +742,7 @@
    "deadline_guide_months": "",
    "deadline_guide_count": "",
    "late_acceptance": "記載なし",
-   "quote": "「その後も事業を継続しようとするときは、あらかじめ許可の更新を受ける必要があります。」「審査の関係上、許可証をお渡しするまで、標準処理期間（60日）を超える日数を要する場合があります。」(処分業・積替保管の許可申請手続き 2026-09-24更新)。手続きの流れPDF(1_koshin_jizenkyogi.pdf)・事前協議取扱指針は順序(事前協議→施設確認検査→許可申請)のみで期間の定めなし。電話確認が要る",
+   "quote": "「その後も事業を継続しようとするときは、あらかじめ許可の更新を受ける必要があります。」「審査の関係上、許可証をお渡しするまで、標準処理期間（60日）を超える日数を要する場合があります。」(処分業・積替保管の許可申請手続き 2026-09-24更新)。手続きの流れPDF(1_koshin_jizenkyogi.pdf)・事前協議取扱指針は順序(事前協議→施設確認検査→許可申請)のみで期間の定めなし",
    "source_url": "https://www.pref.osaka.lg.jp/o120060/sangyohaiki/sanpai/shorigyoukyokasinsei.html",
    "retrieved": "2026-10-12",
    "status": "unconfirmed"
@@ -827,7 +827,7 @@
    "deadline_guide_months": "",
    "deadline_guide_count": "",
    "late_acceptance": "満了を1日でも過ぎたら新規登録(廃止届は不要。空白期間ができる)",
-   "quote": "「有効期限を過ぎた場合は、再度新規登録を行ってください」(県HP 2026-04-01更新)／「有効期限(5年。登録証に記載)を1日でも超えている場合は、新規扱いとなるため、新規の届出様式で提出すること。」(様式第2 記載例)。様式第2・B-1一覧表・郵送の注意点PDFに受付開始の記載なし。電話確認が要る",
+   "quote": "「有効期限を過ぎた場合は、再度新規登録を行ってください」(県HP 2026-04-01更新)／「有効期限(5年。登録証に記載)を1日でも超えている場合は、新規扱いとなるため、新規の届出様式で提出すること。」(様式第2 記載例)。様式第2・B-1一覧表・郵送の注意点PDFに受付開始の記載なし",
    "source_url": "https://www.pref.fukuoka.lg.jp/contents/kouho48.html",
    "retrieved": "2026-10-12",
    "status": "partial"
@@ -962,7 +962,7 @@
    "deadline_guide_days": 30,
    "deadline_guide_months": "",
    "deadline_guide_count": "",
-   "late_acceptance": "有効期間内なら受け付ける(満了日が閉庁日ならその前日の開庁日まで)。受付済なら更新の可否が明らかになるまで現免許が有効と案内(Q12。30日前を過ぎた申請に限った記述ではない)",
+   "late_acceptance": "有効期間内なら受け付ける(満了日が閉庁日ならその前日の開庁日まで)。受付済なら更新の可否が明らかになるまで現免許が有効と案内(Q&A Q12)",
    "quote": "「３０日前を過ぎてもまだ免許の有効期間内（有効期間満了日が閉庁日（土、日、祝日、年末年始）の場合はその前日の開庁日まで）であれば受け付けています。」(Q&A Q11)／「更新申請を受付済の場合は、更新の可否が明らかになるまでは、有効期限が過ぎても現在の免許が有効です。」(Q&A Q12)",
    "source_url": "https://www.pref.fukuoka.lg.jp/contents/takkenqanda.html",
    "retrieved": "2026-10-21",
@@ -980,7 +980,7 @@
    "deadline_guide_months": 2,
    "deadline_guide_count": "",
    "late_acceptance": "記載なし",
-   "quote": "「更新には毎月の締切日はありません。許可期限日までは申請可能ですが、審査の都合上、許可期限の2か月程度前を目安に提出してください。」(市「(特別管理)産業廃棄物収集運搬業・処分業の許可申請書」ページ 2026-07-30更新 見出し「締切日」)／許可権者の原文:「名古屋市内で（特別管理）産業廃棄物の収集運搬業および処分業を行う場合、許可申請が必要です。（積替え保管を伴わない収集運搬の場合愛知県の許可で行うことも可能です。）」(同ページ。2026-10-21 照合)",
+   "quote": "「更新には毎月の締切日はありません。許可期限日までは申請可能ですが、審査の都合上、許可期限の2か月程度前を目安に提出してください。」(市「(特別管理)産業廃棄物収集運搬業・処分業の許可申請書」ページ 2026-07-30更新 見出し「締切日」)／許可権者の原文:「名古屋市内で（特別管理）産業廃棄物の収集運搬業および処分業を行う場合、許可申請が必要です。（積替え保管を伴わない収集運搬の場合愛知県の許可で行うことも可能です。）」(同ページ。2026-10-21 確認)",
    "source_url": "https://www.city.nagoya.jp/jigyou/gomi/1026239/1026273/1026286.html",
    "retrieved": "2026-10-21",
    "status": "partial"
@@ -1031,7 +1031,7 @@
    "deadline_guide_months": "",
    "deadline_guide_count": "",
    "late_acceptance": "法の規定(期限内申請なら処分まで従前の許可有効)のみ記載",
-   "quote": "「許可の有効期間（5年）ごとの許可更新を行うとき」「従前の許可は、許可の有効期間の満了後もその処分がされるまでの間は、なおその効力を有する。」(市「産業廃棄物の処理を行うために必要な許可」ページ 2026-05-26更新)。受付時期・期限の記載なし。電話確認が要る",
+   "quote": "「許可の有効期間（5年）ごとの許可更新を行うとき」「従前の許可は、許可の有効期間の満了後もその処分がされるまでの間は、なおその効力を有する。」(市「産業廃棄物の処理を行うために必要な許可」ページ 2026-05-26更新)。受付時期・期限の記載なし",
    "source_url": "https://www.city.osaka.lg.jp/kankyo/page/0000009225.html",
    "retrieved": "2026-10-12",
    "status": "unconfirmed"
@@ -1065,7 +1065,7 @@
    "deadline_guide_months": "",
    "deadline_guide_count": "",
    "late_acceptance": "記載なし",
-   "quote": "「産業廃棄物処分業の許可（更新を含む。）」「標準処理期間 おおむね２箇月」(市『「申請に対する処分」基準等公開票』2022-05-12作成 p.1)。受付時期・期限の記載なし。電話確認が要る",
+   "quote": "「産業廃棄物処分業の許可（更新を含む。）」「標準処理期間 おおむね２箇月」(市『「申請に対する処分」基準等公開票』2022-05-12作成 p.1)。受付時期・期限の記載なし",
    "source_url": "https://www.city.sakai.lg.jp/shisei/gyosei/gyousei_tetsuduki/kijyun/shinsa_kantaisaku/74486020230118110117541.files/syobun-kyoka0520.pdf",
    "retrieved": "2026-10-12",
    "status": "unconfirmed"
@@ -1133,7 +1133,7 @@
    "deadline_guide_months": "",
    "deadline_guide_count": "",
    "late_acceptance": "記載なし",
-   "quote": "市「産業廃棄物処分業許可申請について」ページ(2023-06-22更新)・提出書類一覧(令和2年7月16日修正)に更新時期の記載なし。電話確認が要る",
+   "quote": "市「産業廃棄物処分業許可申請について」ページ(2023-06-22更新)・提出書類一覧(令和2年7月16日修正)に更新時期の記載なし",
    "source_url": "https://www.city.kitakyushu.lg.jp/contents/00900004.html",
    "retrieved": "2026-10-12",
    "status": "unconfirmed"
@@ -1150,7 +1150,7 @@
    "deadline_guide_months": "",
    "deadline_guide_count": "",
    "late_acceptance": "記載なし",
-   "quote": "市「産業廃棄物収集運搬業許可申請」ページ(2026-03-23更新)・提出書類一覧PDF(R050701)に更新時期の記載なし(2026-10-26 再確認、収集運搬の手引は掲載なし)。電話確認が要る。許可権者の範囲は市「産業廃棄物収集運搬業許可の合理化について」ページ(2022-07-19更新 https://www.city.kurume.fukuoka.jp/1050kurashi/2030kankyougomi/3190sangyouseido/seido2.html)「久留米市長許可は、久留米市内のみでの収集運搬を認める許可です。」(2026-10-26 照合)",
+   "quote": "市「産業廃棄物収集運搬業許可申請」ページ(2026-03-23更新)・提出書類一覧PDF(R050701)に更新時期の記載なし(2026-10-26 再確認、収集運搬の手引は掲載なし)。許可権者の範囲は市「産業廃棄物収集運搬業許可の合理化について」ページ(2022-07-19更新 https://www.city.kurume.fukuoka.jp/1050kurashi/2030kankyougomi/3190sangyouseido/seido2.html)「久留米市長許可は、久留米市内のみでの収集運搬を認める許可です。」(2026-10-26 確認)",
    "source_url": "https://www.city.kurume.fukuoka.jp/1500soshiki/9076haikishi/3020shinsei/2012-0926-1307-473.html",
    "retrieved": "2026-10-26",
    "status": "unconfirmed"
@@ -1184,7 +1184,7 @@
    "deadline_guide_months": "",
    "deadline_guide_count": "",
    "late_acceptance": "記載なし",
-   "quote": "受付時期の記載なし。関連記載「審査の標準処理期間は申請書受理後６０日です。」(市『産業廃棄物収集運搬業許可申請書(新規・更新許可申請用)』令和7年8月 p.2)。電話確認が要る",
+   "quote": "受付時期の記載なし。関連記載「審査の標準処理期間は申請書受理後６０日です。」(市『産業廃棄物収集運搬業許可申請書(新規・更新許可申請用)』令和7年8月 p.2)",
    "source_url": "https://www.city.hachioji.tokyo.jp/kurashi/gomi/jigyosha/sanpai/shorigyo/kyoka/p023105_d/fil/sinki-tebiki.pdf",
    "retrieved": "2026-10-12",
    "status": "unconfirmed"
@@ -1201,7 +1201,7 @@
    "deadline_guide_months": "",
    "deadline_guide_count": "",
    "late_acceptance": "記載なし",
-   "quote": "市『産業廃棄物処分業許可申請書(新規・更新許可申請用)』令和7年8月・手続きページ(令和7年8月12日更新)に更新時期の記載なし。電話確認が要る",
+   "quote": "市『産業廃棄物処分業許可申請書(新規・更新許可申請用)』令和7年8月・手続きページ(令和7年8月12日更新)に更新時期の記載なし",
    "source_url": "https://www.city.hachioji.tokyo.jp/kurashi/gomi/jigyosha/sanpai/shorigyo/kyoka/p023105_d/fil/shobunsinki-tebiki.pdf",
    "retrieved": "2026-10-12",
    "status": "unconfirmed"
@@ -1252,7 +1252,7 @@
    "deadline_guide_months": "",
    "deadline_guide_count": "",
    "late_acceptance": "記載なし",
-   "quote": "「（特別管理）産業廃棄物収集運搬業許可申請（更新） 有効期限が切れる概ね２か月前から申請の受付を行います。」(市『(特別管理)産業廃棄物収集運搬業許可申請の手引』令和8年6月 p.12)。許可権者は資料で書き方が違う: 市の手引 令和8年6月 PDF p.2「積替保管施設を松本市内に設置する場合には、松本市の許可が必要です。積替保管施設を設置せずに（特別管理）産業廃棄物収集運搬業を行う場合は、これまでどおり長野県の許可となります」(市内のみで運ぶ場合は記載なし)／県の名簿ページ(2026-09-30更新 https://www.pref.nagano.lg.jp/haikibut/kurashi/recycling/haikibutsu/mebo.html)「市内に積替保管施設を有する場合、及び長野県知事の許可を持たず、長野県内ではその市でのみ業を行おうとする場合」は各市長の許可／県の手引『(特別管理)産業廃棄物収集運搬業許可申請の手引(積替保管施設なし)』令和8年3月 PDF p.26「長野市（松本市）内に積替保管施設を設置する場合及び長野県内では長野市（松本市）のみで業を行おうとする場合は長野市（松本市）の許可が必要となります。」(https://www.pref.nagano.lg.jp/haikibut/kurashi/shinse/recycling/shisetsunashi/documents/0803sanpaishuun_tebiki.pdf 、2026-10-26 照合。施行令27条1項5号の括弧書きと整合)／市ページ(2026-06-18更新 https://www.city.matsumoto.nagano.jp/soshiki/235/4491.html)も積替保管なしは県知事許可とだけ書き市内のみに触れない／松本地域振興局ページ(2025-12-02更新 https://www.pref.nagano.lg.jp/matsuchi/matsuchi-kankyo/kankyo/haikibutsu/sanhai.html)は「県知事の許可を受ける必要があります」とだけ書き松本市の扱いに触れない(2026-10-21 照合)。市内のみの扱いは市と振興局への確認が要る",
+   "quote": "「（特別管理）産業廃棄物収集運搬業許可申請（更新） 有効期限が切れる概ね２か月前から申請の受付を行います。」(市『(特別管理)産業廃棄物収集運搬業許可申請の手引』令和8年6月 p.12)。許可権者は資料で書き方が違う: 市の手引 令和8年6月 PDF p.2「積替保管施設を松本市内に設置する場合には、松本市の許可が必要です。積替保管施設を設置せずに（特別管理）産業廃棄物収集運搬業を行う場合は、これまでどおり長野県の許可となります」(市内のみで運ぶ場合は記載なし)／県の名簿ページ(2026-09-30更新 https://www.pref.nagano.lg.jp/haikibut/kurashi/recycling/haikibutsu/mebo.html)「市内に積替保管施設を有する場合、及び長野県知事の許可を持たず、長野県内ではその市でのみ業を行おうとする場合」は各市長の許可／県の手引『(特別管理)産業廃棄物収集運搬業許可申請の手引(積替保管施設なし)』令和8年3月 PDF p.26「長野市（松本市）内に積替保管施設を設置する場合及び長野県内では長野市（松本市）のみで業を行おうとする場合は長野市（松本市）の許可が必要となります。」(https://www.pref.nagano.lg.jp/haikibut/kurashi/shinse/recycling/shisetsunashi/documents/0803sanpaishuun_tebiki.pdf 、2026-10-26 確認。施行令27条1項5号の括弧書きと整合)／市ページ(2026-06-18更新 https://www.city.matsumoto.nagano.jp/soshiki/235/4491.html)も積替保管なしは県知事許可とだけ書き市内のみに触れない／松本地域振興局ページ(2025-12-02更新 https://www.pref.nagano.lg.jp/matsuchi/matsuchi-kankyo/kankyo/haikibutsu/sanhai.html)は「県知事の許可を受ける必要があります」とだけ書き松本市の扱いに触れない(2026-10-21 確認)",
    "source_url": "https://www.city.matsumoto.nagano.jp/uploaded/attachment/129982.pdf",
    "retrieved": "2026-10-26",
    "status": "partial"
@@ -1446,6 +1446,164 @@
    "basis": "貨物自動車運送事業報告規則2条の2",
    "basis_url": "https://laws.e-gov.go.jp/law/402M50000800033",
    "retrieved": "2026-10-12"
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "osaka-annual-01",
+   "license_id": "construction",
+   "procedure": "annual",
+   "authority": "大阪府",
+   "seq": 1,
+   "document_name": "法人事業税納税証明書（3 か月以内発行の原本）",
+   "quote": "法人事業税納税証明書（3 か月以内発行の原本） 大阪府税事務所で交付を受けてください。",
+   "page": "PDF p.70（印刷p.4-1）",
+   "source_url": "https://www.pref.osaka.lg.jp/documents/8330/henkou_tebiki_r0803.pdf",
+   "retrieved": "2026-11-20",
+   "status": "confirmed"
+  },
+  {
+   "doc_id": "osaka-annual-02",
+   "license_id": "construction",
+   "procedure": "annual",
+   "authority": "大阪府",
+   "seq": 2,
+   "document_name": "個人事業税の納税証明書（3 か月以内発行の原本）",
+   "quote": "個人事業税の納税証明書（3 か月以内発行の原本）",
+   "page": "PDF p.70（印刷p.4-1）",
+   "source_url": "https://www.pref.osaka.lg.jp/documents/8330/henkou_tebiki_r0803.pdf",
+   "retrieved": "2026-11-20",
+   "status": "confirmed"
+  },
+  {
+   "doc_id": "osaka-renewal-01",
+   "license_id": "construction",
+   "procedure": "renewal",
+   "authority": "大阪府",
+   "seq": 1,
+   "document_name": "登記されていないことの証明書",
+   "quote": "※法務局本局で交付された３か月以内の原本を添付してください。（オンライン申請は不可）",
+   "page": "PDF p.50（印刷p.3-2）",
+   "source_url": "https://www.pref.osaka.lg.jp/documents/8330/kyoka_tebik_r0803.pdf",
+   "retrieved": "2026-11-20",
+   "status": "confirmed"
+  },
+  {
+   "doc_id": "osaka-renewal-02",
+   "license_id": "construction",
+   "procedure": "renewal",
+   "authority": "大阪府",
+   "seq": 2,
+   "document_name": "市町村の長の証明書",
+   "quote": "※本籍地を所管する市町村で交付された３か月以内の原本を添付してください。",
+   "page": "PDF p.51（印刷p.3-3）",
+   "source_url": "https://www.pref.osaka.lg.jp/documents/8330/kyoka_tebik_r0803.pdf",
+   "retrieved": "2026-11-20",
+   "status": "confirmed"
+  },
+  {
+   "doc_id": "osaka-renewal-03",
+   "license_id": "construction",
+   "procedure": "renewal",
+   "authority": "大阪府",
+   "seq": 3,
+   "document_name": "健康保険・厚生年金保険・雇用保険の加入確認書類の写し",
+   "quote": "健康保険・厚生年金保険・雇用保険の 加入確認書類の写し",
+   "page": "PDF p.51（印刷p.3-3）",
+   "source_url": "https://www.pref.osaka.lg.jp/documents/8330/kyoka_tebik_r0803.pdf",
+   "retrieved": "2026-11-20",
+   "status": "confirmed"
+  },
+  {
+   "doc_id": "tokyo-annual-01",
+   "license_id": "construction",
+   "procedure": "annual",
+   "authority": "東京都",
+   "seq": 1,
+   "document_name": "法人事業税　納税（課税）証明書",
+   "quote": "届け出る事業年度分について必要",
+   "page": "PDF p.92（印刷p.86）",
+   "source_url": "https://www.toshiseibi.metro.tokyo.lg.jp/documents/d/toshiseibi/2026-09-04-143143-026",
+   "retrieved": "2026-11-20",
+   "status": "confirmed"
+  },
+  {
+   "doc_id": "tokyo-annual-02",
+   "license_id": "construction",
+   "procedure": "annual",
+   "authority": "東京都",
+   "seq": 2,
+   "document_name": "個人事業税　納税（課税）証明書",
+   "quote": "(例)令和７年度の決算変更届を提出する場合、 都税事務所 →「令和８年度」 税務署 →「令和７年分」のものが必要",
+   "page": "PDF p.92（印刷p.86）",
+   "source_url": "https://www.toshiseibi.metro.tokyo.lg.jp/documents/d/toshiseibi/2026-09-04-143143-026",
+   "retrieved": "2026-11-20",
+   "status": "partial"
+  },
+  {
+   "doc_id": "tokyo-annual-03",
+   "license_id": "construction",
+   "procedure": "annual",
+   "authority": "東京都",
+   "seq": 3,
+   "document_name": "申告所得税の「納税証明書（その２）」",
+   "quote": "更新申請等のため８月半ばまでに提出する場合は申告所得税の「納税証明書（その２）」（摘要欄に「事業所得金額」の記載があるもの）を添付",
+   "page": "PDF p.92（印刷p.86）",
+   "source_url": "https://www.toshiseibi.metro.tokyo.lg.jp/documents/d/toshiseibi/2026-09-04-143143-026",
+   "retrieved": "2026-11-20",
+   "status": "confirmed"
+  },
+  {
+   "doc_id": "tokyo-renewal-01",
+   "license_id": "construction",
+   "procedure": "renewal",
+   "authority": "東京都",
+   "seq": 1,
+   "document_name": "登記事項証明書（履歴事項全部証明書）",
+   "quote": "登記事項証明書（履歴事項全部証明書）（発行後３か月以内のもの） （注）インターネット「登記情報サービス」から提供する登記情報を印刷したものは、認証文、公印等が付加されていないので不可とします。",
+   "page": "PDF p.27（印刷p.21）",
+   "source_url": "https://www.toshiseibi.metro.tokyo.lg.jp/documents/d/toshiseibi/2026-09-04-143143-026",
+   "retrieved": "2026-11-20",
+   "status": "confirmed"
+  },
+  {
+   "doc_id": "tokyo-renewal-02",
+   "license_id": "construction",
+   "procedure": "renewal",
+   "authority": "東京都",
+   "seq": 2,
+   "document_name": "登記されていないことの証明書",
+   "quote": "発行後３カ月以内の「登記されていないことの証明書（成年被後見人・被保佐人に該当しない旨の登記事項証明書）」又は証明日が３カ月以内の「医師の診断書」",
+   "page": "PDF p.27（印刷p.21）",
+   "source_url": "https://www.toshiseibi.metro.tokyo.lg.jp/documents/d/toshiseibi/2026-09-04-143143-026",
+   "retrieved": "2026-11-20",
+   "status": "confirmed"
+  },
+  {
+   "doc_id": "tokyo-renewal-03",
+   "license_id": "construction",
+   "procedure": "renewal",
+   "authority": "東京都",
+   "seq": 3,
+   "document_name": "身分証明書",
+   "quote": "発行後３カ月以内の「身分証明書（破産者で復権を得ないもの等に該当しない旨の区市町村長の証明書）」",
+   "page": "PDF p.27（印刷p.21）",
+   "source_url": "https://www.toshiseibi.metro.tokyo.lg.jp/documents/d/toshiseibi/2026-09-04-143143-026",
+   "retrieved": "2026-11-20",
+   "status": "confirmed"
+  },
+  {
+   "doc_id": "tokyo-renewal-04",
+   "license_id": "construction",
+   "procedure": "renewal",
+   "authority": "東京都",
+   "seq": 4,
+   "document_name": "健康保険・厚生年金・雇用保険の加入証明資料",
+   "quote": "健康保険・厚生年金・雇用保険の加入証明資料",
+   "page": "PDF p.27（印刷p.21）",
+   "source_url": "https://www.toshiseibi.metro.tokyo.lg.jp/documents/d/toshiseibi/2026-09-04-143143-026",
+   "retrieved": "2026-11-20",
+   "status": "confirmed"
   }
  ]
 }
